@@ -1,18 +1,53 @@
-# WKU Affiliated Hospital Management System
+#  Hospital Management System (HMS)
 
+A simple Java-based hospital management system built for CPS2231 coursework. The system supports basic hospital operations such as doctor login, patient consultation records, and billing.
 
-## Schedule
-1. Do some research on the data structure and data persistence techniques, which can be used in my project (due May 12) ✅ on May 13 
-1. Plan the program framework (due May 14) ✅ on May 16
-1. Write exception classes (due May 17)
-1. Implement all data classes (due May 17)
-1. Implement all service classes (due May 18)
-1. Conduct tests and refine the program (no due date until the project due date)
+> Developed by Yu Yiduo  
+> Course: CPS2231 
+> Instructor: Prof. Wu
 
+---
 
+##  Features
 
+- **Doctor Registration & Login**  
+  Doctors can create their own accounts and log in with ID and password.
 
+- **Consultation Record**  
+  Doctors can input patient information and record consultation notes.
 
+- **Billing System**  
+  Patients are able to pay medical bills based on the consultation.
+
+- **Persistent Storage**  
+  All records (doctors, patients, admin, system logs) are saved to local files using binary I/O.
+
+---
+
+##  System Construction
+
+- **Main Components**:
+    - `Doctor` (Admin)
+    - `Patient`
+    - `HMS` (Main system frame)
+    - `MedicalRecord`
+
+- **Storage Design**:
+    - `./tmp/admin` — Admin data (binary)
+    - `./tmp/doctors` — Doctor accounts (binary)
+    - `./tmp/patient` — Patient records (binary)
+    - `./tmp/system.txt` — System logs
+    - `./desktop/records/patients.txt` — Output of patient info for viewing
+
+- Uses `ObjectInputStream` / `ObjectOutputStream` for reading and writing serialized objects.
+
+---
+
+## Technologies Used
+
+- Java
+- File I/O (Binary serialization)
+- Command-line interface
 
 
 
